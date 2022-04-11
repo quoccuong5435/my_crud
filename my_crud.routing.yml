@@ -1,0 +1,7 @@
+my_crud.register_form:
+  path: 'user/form/example-register'
+  defaults:
+    _form: 'Drupal\my_crud\Form\RegisterForm'
+    _title: 'Page Register User'
+  requirements:
+    _permission: 'access content'

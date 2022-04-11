@@ -1,0 +1,6 @@
+name: Example Register Module
+type: module
+description: 'Module Register'
+package: Custom
+version: 2.1
+core_version_requirement: ^8 || ^9

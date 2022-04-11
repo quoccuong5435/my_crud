@@ -1,0 +1,8 @@
+<?php 
+    function my_crud_menu()
+    {
+        $item['my_crud/form/data'] = array('title' => 'Page Register User', 'description' => '', 'route' => 'my_crud.register_form');
+
+        return $item;
+    }
+?>
