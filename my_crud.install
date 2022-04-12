@@ -9,6 +9,15 @@
     'email'=>['description'=>'Candiate of the email',
     'type'=>'varchar', 'length'=>'40','not null'=>TRUE, ],
 
+    'age'=>['description'=>'Candiate of the age',
+    'type'=>'varchar', 'length'=>'40','not null'=>TRUE, ],
+
+    'list_age'=>['description'=>'Candiate of the    listage',
+    'type'=>'varchar', 'length'=>'40','not null'=>TRUE, ],
+
+    'intro'=>['description'=>'Candiate of the    intro',
+    'type'=>'varchar', 'length'=>'500','not null'=>TRUE, ],
+
     'phone'=>['description'=>'Candiate of the phone',
     'type'=>'varchar', 'length'=>'40','not null'=>TRUE, ],],
 
