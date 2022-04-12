@@ -177,7 +177,6 @@
 
         public static function getFirstDropdownOptions() {
             return [
-                'none' => 'none',
                 '1' => '10-20',
                 '2' => '21-30',
                 '3' => '31-40',
