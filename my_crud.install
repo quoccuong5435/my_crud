@@ -1,4 +1,11 @@
+ 
+
  <?php
+  /**
+  *   Database create 
+  *
+  * 
+  */
  function my_crud_schema()
  {
     $schema['my_crud'] = ['description'=>'This table is used to create CRUD operations', 'fields'=>['id'=>['description'=>'The primary identifier of the table','type'=>'serial', 'not null'=>TRUE, 'unsigned'=>TRUE, ],

@@ -117,11 +117,15 @@
             
 
             $email = $form_state -> getValue('email');
-            $temp_email = explode('@', $email);
-            $string ="kyanon.digital";
-            if ($temp_email[1] != $string) {
-                $form_state->setErrorByName('email', $this->t("Invalid email format. please use @kyanon.digital"));
+            if(filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+              $temp_email = explode('@', $email);
+              $string ="kyanon.digital";
+              if ($temp_email[1] != $string) {
+                  $form_state->setErrorByName('email', $this->t("Invalid email format. please use @kyanon.digital"));
+              }
             }
+           
 
             $age = $form_state-> getValue('select_dropdown');
             if ($age <= 18) {
@@ -187,63 +191,27 @@
           public static function getSecondDropdownOptions($key = '') {
               switch ($key) {
               case '1':
-                $options = [
-                    '10' => '10',
-                    '11' => '11',
-                    '12' => '12',
-                    '13' => '13',
-                    '14' => '14',
-                    '15' => '15',
-                    '16' => '16',
-                    '17' => '17',
-                    '18' => '18',
-                    '19' => '19',
-                    '20' => '20',
-                  ];
+                $number = range(10,20); 
+                $options = array_combine($number , $number);
+                
+               
                 break;
         
               case '2':
-                $options = [
-                  '21' => '21',
-                  '22' => '22',
-                  '23' => '23',
-                  '24' => '24',
-                  '25' => '25',
-                  '26' => '26',
-                  '27' => '27',
-                  '28' => '28',
-                  '29' => '29',
-                  '30' => '30',
-                ];
+                $number = range(21,30);
+                
+                $options = array_combine($number , $number);
                 break;
         
               case '3':
-                $options = [
-                  '31' => '31',
-                  '32' => '32',
-                  '33' => '33',
-                  '34' => '34',
-                  '35' => '35',
-                  '36' => '36',
-                  '37' => '37',
-                  '38' => '38',
-                  '39' => '39',
-                  '40' => '40',
-                ];
+                $number = range(31,40);
+                
+                $options = array_combine($number , $number);
                 break;
                 case '4':
-                    $options = [
-                     '41'   => '41',
-                     '42' => '42',
-                     '43' => '43',
-                     '44' => '44',
-                     '45' => '45',
-                     '46' => '46',
-                     '47' => '47',
-                     '48' => '48',
-                     '49' => '49',
-                     '50' => '50',
-                    ];
+                  $number = range(41,50);
+                
+                  $options = array_combine($number , $number);
                     break;
         
               default:

@@ -5,3 +5,5 @@ my_crud.register_form:
     _title: 'Page Register User'
   requirements:
     _permission: 'access content'
+
+    
